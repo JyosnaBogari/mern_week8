@@ -1,0 +1,23 @@
+POST http://localhost:3000/user-api/users 
+Content-Type: application/json
+
+{
+    "name":"jyosna",
+    "email":"jyosnabogari@gmail.com",
+   "dateOfBirth":"2005-11-08",
+   "mobileNumber":9234567876
+}
+### read all users
+
+GET http://localhost:3000/user-api/users
+
+### read user by Id
+GET http://localhost:3000/user-api/users/69a69ce78b2004723797b487
+
+### delete the user by Id
+DELETE http://localhost:3000/user-api/users/69a69ce78b2004723797b487
+
+### patch
+PATCH http://localhost:3000/user-api/users/69a69ce78b2004723797b487
+
+
