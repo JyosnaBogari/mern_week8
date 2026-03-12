@@ -16,9 +16,9 @@ function UserList() {
   useEffect(() => {
     async function getUsers() {
       try {
-        let res = await fetch("http://localhost:3000/user-api/users")
+        let res = await fetch("https://mern-week8-3.onrender.com/user-api/users")
         let data = await res.json()
-        setUsers(data.payload)
+        setUsers(data.payload || [])
       } catch (err) {
         setError(err.message)
       } finally {
@@ -42,7 +42,11 @@ function UserList() {
   if (error) {
     return <p className="text-center text-2xl text-red-400">{error.message}</p>;
   }
+  if (!users || users.length === 0) {
+  return <p className="text-blue-500 text-2xl text-center p-10">No users Found.Please Add User</p>
+}
   const filteredUsers=users.filter(userObj=>userObj.name.toLowerCase().includes(searchUser.toLowerCase()))
+  
   return (
     <div>
 

@@ -14,7 +14,7 @@ function AddUser() {
       try {
         // making an API request
         //this will sends to the backend server
-         let res = await fetch("http://localhost:3000/user-api/users", {
+         let res = await fetch("https://mern-week8-3.onrender.com/user-api/users", {
             method: "POST",
             headers: {
                "Content-Type": "application/json",
