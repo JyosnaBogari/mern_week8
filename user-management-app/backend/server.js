@@ -12,11 +12,10 @@ const app = exp()
 
 //add cors
 app.use(cors({
-    origin:['http://localhost:5173']
-}))
+    origin: ['http://localhost:5173', 'https://mern-week8-za64.vercel.app']
+}));
 //port 
-const PORT = 3000;
-
+const PORT = process.env.PORT || 3000;
 //json parser
 app.use(exp.json());
 
