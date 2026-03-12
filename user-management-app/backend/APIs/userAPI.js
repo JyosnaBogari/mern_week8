@@ -9,7 +9,7 @@ userRoute.post('/users', async (req, res) => {
     //get the user data from user
     let newUser = req.body;
     //new user document 
-    const newUserDoc = await UserModel(newUser)
+    const newUserDoc = new UserModel(newUser)
     //save new user
     let user = await newUserDoc.save();
     //send res
